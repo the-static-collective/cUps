@@ -1,0 +1,10 @@
+{
+  "name": "cUps — First Cup",
+  "short_name": "cUps",
+  "description": "What can U build with cups?",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#11110f",
+  "theme_color": "#11110f",
+  "orientation": "portrait-primary"
+}
