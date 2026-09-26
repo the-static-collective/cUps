@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#11110f">
+  <title>cUps — First Cup</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="game" aria-live="polite">
+    <header class="topbar">
+      <div>
+        <strong>cUps</strong>
+        <span id="worldLabel">WORLD 000</span>
+      </div>
+      <button id="traceButton" class="ghost" type="button">TRACE <span id="traceCount">0</span></button>
+    </header>
+
+    <section id="void" class="void">
+      <p class="whisper">There may be something here.</p>
+      <button id="lookButton" class="verb primary" type="button">LOOK</button>
+    </section>
+
+    <section id="room" class="room hidden" aria-label="The First Room">
+      <div class="wall">
+        <p id="roomText" class="room-text">A room.</p>
+      </div>
+
+      <div id="table" class="table" aria-label="wooden table">
+        <div class="grain grain-a"></div>
+        <div class="grain grain-b"></div>
+        <div id="cupField" class="cup-field"></div>
+      </div>
+
+      <aside id="observation" class="observation">
+        <p id="observationText">You can see a blue cup.</p>
+      </aside>
+
+      <nav id="verbs" class="verbs" aria-label="available actions">
+        <button id="touchButton" class="verb hidden" type="button">TOUCH</button>
+        <button id="moveButton" class="verb hidden" type="button">MOVE</button>
+        <button id="makeButton" class="verb hidden" type="button">MAKE ANOTHER</button>
+        <button id="stackButton" class="verb hidden" type="button">STACK</button>
+      </nav>
+
+      <div id="marks" class="marks hidden" aria-label="mark this moment">
+        <span>mark:</span>
+        <button data-mark="DELIGHT" type="button">DELIGHT</button>
+        <button data-mark="WTF" type="button">WTF</button>
+      </div>
+    </section>
+
+    <section id="traceDrawer" class="drawer hidden" aria-label="trace rail">
+      <div class="drawer-head">
+        <div>
+          <strong>TRACE RAIL</strong>
+          <small>occurrence != meaning</small>
+        </div>
+        <button id="closeTrace" class="ghost" type="button">CLOSE</button>
+      </div>
+      <ol id="traceList"></ol>
+      <div class="drawer-actions">
+        <button id="copyTrace" type="button">COPY JSON</button>
+        <button id="resetWorld" class="danger" type="button">RESET WORLD</button>
+      </div>
+    </section>
+
+    <div id="toast" class="toast hidden" role="status"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
